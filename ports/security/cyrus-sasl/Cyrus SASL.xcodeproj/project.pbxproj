@@ -2107,8 +2107,20 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = sasl2_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					macintosh,
+					SASL_MONOLITHIC,
+				);
 				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"cyrus-sasl/sasldb",
+					"cyrus-sasl/plugins",
+					"cyrus-sasl/include",
+					"cyrus-sasl",
+					../../../include,
+					"cyrus-sasl/mac/include",
+				);
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = sasl2;
 				SKIP_INSTALL = YES;
@@ -2124,8 +2136,20 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = sasl2_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					macintosh,
+					SASL_MONOLITHIC,
+				);
 				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"cyrus-sasl/sasldb",
+					"cyrus-sasl/plugins",
+					"cyrus-sasl/include",
+					"cyrus-sasl",
+					../../../include,
+					"cyrus-sasl/mac/include",
+				);
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = sasl2;
 				SKIP_INSTALL = YES;
