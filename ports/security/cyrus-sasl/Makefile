@@ -78,6 +78,7 @@ endif
 clean-local:
 	/bin/rm -Rf include
 	/bin/rm -Rf ../../../include/sasl
+	/bin/rm patch-2.1.23-for-iOS.patch.done
 
 distclean-local:
 	/bin/rm -Rf build
