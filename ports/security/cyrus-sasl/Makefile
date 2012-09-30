@@ -65,7 +65,15 @@ $(INSTALLHEADERS): $(PACKAGE_TARNAME)
 cyrus-sasl/config.h: $(PACKAGE_TARNAME)
 	cp build-aux/config.h cyrus-sasl/
 
-extra-prep: cyrus-sasl/config.h $(INSTALLHEADERS)
+extra-prep: cyrus-sasl/config.h $(INSTALLHEADERS) patch-for-ios
+
+patch-for-ios:
+ifeq ($(wildcard patch-2.1.23-for-iOS.patch.done),)
+	echo "Patching for iOS..."
+	cd  $(PACKAGE_DIR); patch -p1 < ../patch-2.1.23-for-iOS.patch && touch ../patch-2.1.23-for-iOS.patch.done
+else
+	echo "Patch for iOS already done."
+endif
 
 clean-local:
 	/bin/rm -Rf include
@@ -73,5 +81,7 @@ clean-local:
 
 distclean-local:
 	/bin/rm -Rf build
+
+.PHONY: patch-for-ios
 
 # end of Makefile
