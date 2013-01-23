@@ -9,3 +9,4 @@ xcuserdata
 /build-aux/iOSPorts-pkginfo
 a.out
 pkgdata_*.m
+ports/security/cyrus-sasl/patch-2.1.23-for-iOS.patch.done
